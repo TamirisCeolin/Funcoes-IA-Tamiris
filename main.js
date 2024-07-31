@@ -74,7 +74,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-let historiaFInal = "";
+let historiaFinal = "";
 
 function mostraPergunta() {
     if(atual >= perguntas.lenght){
@@ -98,14 +98,14 @@ function mostraAlternativas() {
 
 function respostaSelecionada(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFInal += afirmacoes + " ";
+    historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
 }
 
 function mostraResultado(){
     caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFInal;
+    textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
 
