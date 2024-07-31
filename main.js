@@ -10,12 +10,12 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Isso é assustador!",
-                afirmacao: "afirmacao",
+                afirmacao: "afirmaçao",
+            },
+            {
+                texto: "Isso é maravilhoso!",
+                afirmacao: "afirmaçao",
             }
-           {
-                texto:  "Isso é maravilhoso!",
-                afirmacao: "afirmacao",
-           } 
         ]
     },
     {
@@ -24,7 +24,7 @@ const perguntas = [
             {
                 texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
                 afirmacao: "afirmacao",
-            }
+            },
             {
                 texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
                 afirmacao: "afirmacao",
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "afirmacao" ,
-            }
-            {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores."
                 afirmacao: "afirmacao",
+            },
+            {
+                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                afirmacao: "afirmaçao",
             }
         ]
     },
@@ -50,9 +50,9 @@ const perguntas = [
             {
                 texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
                 afirmacao: "afirmacao",
-            }
+            },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA."
+                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
                 afirmacao: "afirmacao",
             }
         ]
@@ -62,10 +62,10 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmacao" ,
-            }
+                afirmacao: "afirmacao",
+            },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial."
+                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
                 afirmacao: "afirmacao",
             }
         ]
@@ -83,15 +83,14 @@ function mostraPergunta() {
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
-      const botaoAlternativas = document.createElement("button");
-      botaoAlternativas.textContent = alternativa.texto;
-      botaoAlternativas.addEventListener("click", function () {
-        atual++;
-        mostraPergunta();
-      });
-      caixaAlternativas.appendChild(botaoAlternativas);
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", function () {
+            atual++;
+            mostraPergunta();
+        });
+        caixaAlternativas.appendChild(botaoAlternativas);
     }
-  }
+}
 
-  mostraPergunta();
-
+mostraPergunta();
